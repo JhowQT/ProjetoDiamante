@@ -1,13 +1,13 @@
-package com.br.fiap.CidadeOnline;
+package com.br.fiap.ProjetoBank;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class CidadeOnlineApplication {
+public class ProjetoBankApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(CidadeOnlineApplication.class, args);
+		SpringApplication.run(ProjetoBankApplication.class, args);
 	}
 
 }

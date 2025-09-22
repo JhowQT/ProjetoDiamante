@@ -1,10 +1,10 @@
-package com.br.fiap.CidadeOnline;
+package com.br.fiap.ProjetoBank;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class CidadeOnlineApplicationTests {
+class ProjetoBankApplicationTests {
 
 	@Test
 	void contextLoads() {
