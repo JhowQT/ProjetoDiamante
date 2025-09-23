@@ -7,6 +7,11 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.validation.constraints.DecimalMin;
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
+import jakarta.validation.constraints.PastOrPresent;
+import jakarta.validation.constraints.Size;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -18,17 +23,33 @@ import lombok.NoArgsConstructor;
 @Entity
 @Builder
 public class Conta {
-    @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    
+    @NotBlank(message = "{conta.numero.notblank}")
     private String numero;
-    private String agencia;
-    private String nomeTitular;
-    private String cpfTitular;
-    private LocalDate dataAbertura;
-    private BigDecimal saldo;
-    private Boolean ativo;
-    private TipoConta tipo;
 
+    @NotBlank(message = "{conta.agencia.notblank}")
+    private String agencia;
+
+    @NotBlank(message = "{conta.nomeTitular.notblank}")
+    private String nomeTitular;
+
+    @NotBlank(message = "{conta.cpfTitular.notblank}")
+    @Size(min = 11, max = 11, message = "{conta.cpfTitular.size}")
+    private String cpfTitular;
+
+    @PastOrPresent(message = "{conta.dataAbertura.pastorpresent}")
+    private LocalDate dataAbertura;
+
+    @NotNull(message = "conta.saldo.notnull")
+    @DecimalMin(value = "0.0", message = "{conta.saldo.decimalmin}")
+    private BigDecimal saldo;
+
+    private Boolean ativo;
+
+    @NotNull(message = "{conta.tipo.notnull}")
+    private TipoConta tipo;
 }
