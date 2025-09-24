@@ -23,7 +23,7 @@ ________________________________________________________________________________
 `localhost:8080:conta`
 > Retorna todas as contas dentro do banco de dados
 _______________________________________________________________________________________________________
-- **METODO GET/CONTA/ID **
+- **METODO GET/CONTA/ID**
 `localhost:8080/conta/1`
 > Retorna a busca por id, onde o **id**, deve ser refente a conta existente
 _______________________________________________________________________________________________________
