@@ -31,7 +31,7 @@ ________________________________________________________________________________
 `localhost:8080/conta`
 > Referese a criação da conta
 > **formato para a criação**
-> `{
+ `{
   "numero": "",
   "agencia": "",
   "nomeTitular": "",
