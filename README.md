@@ -19,3 +19,38 @@
 `localhost:8080`
 > Retorna os Integrantes do Trabalho
 _______________________________________________________________________________________________________
+- **METODO GET/CONTA**
+`localhost:8080:conta`
+> Retorna todas as contas dentro do banco de dados
+_______________________________________________________________________________________________________
+- **METODO GET/CONTA/ID **
+`localhost:8080/conta/1`
+> Retorna a busca por id, onde o **id**, deve ser refente a conta existente
+_______________________________________________________________________________________________________
+- **METODO POST/CONTA**
+`localhost:8080/conta`
+> Referese a criação da conta
+> **formaato para a criação**
+> `{
+  "numero": "",
+  "agencia": "",
+  "nomeTitular": "",
+  "cpfTitular": "",
+  "dataAbertura": "",
+  "saldo": ,
+  "tipo": ""
+}
+`
+_______________________________________________________________________________________________________
+
+
+
+
+
+
+
+
+
+
+
+
