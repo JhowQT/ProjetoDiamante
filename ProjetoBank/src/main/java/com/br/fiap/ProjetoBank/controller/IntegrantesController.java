@@ -9,6 +9,8 @@ public class IntegrantesController {
     
     @GetMapping("/")
     public String integrantesProjeto() {
-        return "Integrantes";
+        return "Integrantes: \n"+
+        "RM560601:Jhonatan Quispe Torrez   \n" + 
+        "RM560293:Julia Damasco Busso";
     }
 }

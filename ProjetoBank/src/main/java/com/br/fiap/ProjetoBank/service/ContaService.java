@@ -22,14 +22,13 @@ public class ContaService {
 
     @Transactional
     public Conta criarConta(Conta conta) {
-        // Validações de negócio
         if (conta.getDataAbertura().isAfter(LocalDate.now())) {
             throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "Data de abertura não pode ser no futuro");
         }
         if (conta.getSaldo().compareTo(BigDecimal.ZERO) < 0) {
             throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "Saldo inicial não pode ser negativo");
         }
-        conta.setAtivo(true); // Nova conta sempre ativa
+        conta.setAtivo(true);
         return contaRepository.save(conta);
     }
 
@@ -84,12 +83,9 @@ public class ContaService {
 
     @Transactional
     public Conta transferir(Long idOrigem, Long idDestino, BigDecimal valor) {
-        // Primeiro sacar da origem (já valida saldo e conta ativa)
         Conta origem = sacar(idOrigem, valor);
-        
-        // Depois depositar no destino
         depositar(idDestino, valor);
         
-        return origem; // retorna a conta de origem atualizada
+        return origem;
     }
 }
