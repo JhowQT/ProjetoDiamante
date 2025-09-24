@@ -42,8 +42,7 @@ ________________________________________________________________________________
   "tipo": ""
 }
 ```
-Para o tipo: "", entrada esperada e corrente, 
-poupança ou salário.
+**Para o tipo: "", entrada esperada e:** `corrente, poupança ou salário.`
 _______________________________________________________________________________________________________
 - **METODO PUT/CONTA/1/ENCERRAR**
 `localhost:8080/conta/1/encerrar`
