@@ -31,16 +31,18 @@ ________________________________________________________________________________
 `localhost:8080/conta`
 > Referese a criação da conta
 > **formato para a criação**
- `{
+```json
+{
   "numero": "",
   "agencia": "",
   "nomeTitular": "",
   "cpfTitular": "",
   "dataAbertura": "",
-  "saldo": ,
+  "saldo": 0.0,
   "tipo": ""
 }
-`
+Para o tipo: "", entrada esperada e corrente, 
+poupança ou salário.
 _______________________________________________________________________________________________________
 - **METODO PUT/CONTA/1/ENCERRAR**
 `localhost:8080/conta/1/encerrar`
