@@ -30,7 +30,7 @@ ________________________________________________________________________________
 - **METODO POST/CONTA**
 `localhost:8080/conta`
 > Referese a criação da conta
-> **formaato para a criação**
+> **formato para a criação**
 > `{
   "numero": "",
   "agencia": "",
@@ -42,6 +42,33 @@ ________________________________________________________________________________
 }
 `
 _______________________________________________________________________________________________________
+- **METODO PUT/CONTA/1/ENCERRAR**
+`localhost:8080/conta/1/encerrar`
+>Refese ao encerramento da conta **encerrar** e o parametro para encerrar a conta
+>Retorno esperado e `ativo=false`
+_______________________________________________________________________________________________________
+- **METODO PUT/CONTA/1/DEPOSITO?VALOR=100**
+`localhost:8080/conta/1/deposito?valor=500`
+>Para o deposito criamos a referencia de **deposito** e **valor** onde '=500' e o valor a ser depositado
+_______________________________________________________________________________________________________
+- **METODO PUT/CONTA/1/SAQUE?VALOR=100**
+`localhost:8080/conta/1/saque?valor=500`
+>Para o deposito criamos a referencia de **saque** e **valor** onde '=500' e o valor a ser sacado
+_______________________________________________________________________________________________________
+- **METODO PUT/CONTA/PIX?IdOrigen=1&IdDestino=2&valor=100**
+`localhost:8080//conta/pix?idOrigem=1&idDestino=2&valor=100`
+> Para a implementação do **PIX**, parametro **idOrigen** serve para inserirmos o **id** que vai enviar e o **IdDestino** redere-se ao **id** que vai receber o valor
+
+
+
+
+
+
+
+
+
+
+
 
 
 
